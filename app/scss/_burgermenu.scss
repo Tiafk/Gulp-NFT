@@ -1,0 +1,130 @@
+.burger-menu {
+    display: none;
+    opacity: 1;
+    z-index: 1000;
+
+    .wrapper-top {
+
+        .logo {
+            display: none;
+            z-index: 1000;
+
+            svg {
+                width: 100%;
+            }
+        }
+
+        .menu-btn {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 40px;
+            max-height: 16px;
+            min-height: 16px;
+            justify-content: space-between;
+            z-index: 110;
+
+            .line {
+                min-width: 100%;
+                min-height: 3px;
+                background: #fff;
+            }
+        }
+    }
+
+    .navigation {
+        display: none;
+        opacity: 0;
+        flex-direction: column;
+        padding: 50px 0 0 20px;
+        z-index: 100;
+
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+
+            .link {
+                font-family: 'Inter Regular';
+                font-size: 23px;
+                line-height: 27.60px;
+                list-style-type: none;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: #CECECE;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .header__personal-area {
+            margin: 90px 0 60px;
+            align-self: start;
+        }
+    }
+}
+
+.open {
+    position: absolute;
+    display: flex;
+    width: 304px;
+    background: #293344;
+    border-radius: 0 0 0 30px;
+    right: 0;
+    top: 0;
+
+    .container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .wrapper-top {
+        display: flex;
+        width: 100%;
+        max-width: 268px;
+        justify-content: space-between;
+        padding: 20px 16px 0 20px;
+
+        .logo {
+            display: flex;
+        }
+
+        .menu-btn {
+            position: relative;
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            z-index: 100;
+
+            .line {
+                position: absolute;
+                transform: rotate(-45deg);
+
+                &:last-child {
+                    position: absolute;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .navigation {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+@media (max-width:1233px) {
+    .burger-menu {
+        display: flex;
+
+        .logo {
+            max-width: calc(89px + (128 - 89) * ((100vw - 320px) / (1920 - 320)));
+        }
+    }
+}

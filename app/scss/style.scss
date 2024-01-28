@@ -1,0 +1,123 @@
+@import './header';
+@import './starting';
+@import './education';
+@import './pop-up';
+@import './burgermenu';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'Inter Regular';
+    justify-content: center;
+    width: 100%;
+    background: #1D2532;
+    overflow: hidden;
+
+    .eclipse {
+        position: absolute;
+        width: 415px;
+        height: 415px;
+        transform: rotate(11.969deg);
+        flex-shrink: 0;
+        top: -188.98px;
+        left: 14.86px;
+        border-radius: 50%;
+        background: linear-gradient(171deg, rgba(95, 56, 255, 0.35) 25.59%, rgba(255, 14, 222, 0.35) 100.44%);
+        filter: blur(86px);
+        z-index: 0;
+    }
+
+    .btn {
+        cursor: pointer;
+        display: flex;
+        align-self: start;
+        font-family: "GT Walsheim Pro";
+        text-align: center;
+        color: #242424;
+        line-height: 130%;
+        border: 0;
+        border-radius: 20px;
+        background: var(--Gr, linear-gradient(93deg, #1DD844 1.44%, #CBF62E 126.29%));
+        box-shadow: 0px 0px 15px 0px #1DD844;
+        padding: 20px 30px;
+        margin-top: 67px;
+        transition: .3s ease;
+
+        &:hover {
+            transition: .3s ease;
+            box-shadow: 0px 0px 40px 0px #1DD844;
+        }
+
+        &:active {
+            transition: .3s ease;
+            box-shadow: 0px 0px 15px 0px #1DD844;
+        }
+
+        &:disabled {
+            box-shadow: 0px 0px 0px 0px #1DD844;
+
+            p {
+                opacity: 30%;
+            }
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    z-index: 1;
+}
+
+.blur {
+    filter: blur(7.5px);
+}
+
+.block {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('../fonts/src/GTWalsheimPro-Medium.ttf'),
+        url('../fonts/GTWalsheimPro-Medium.woff'),
+        url('../fonts/GTWalsheimPro-Medium.woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('../fonts/src/Inter-Regular.ttf'),
+        url('../fonts/Inter-Regular.woff'),
+        url('../fonts/Inter-Regular.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('../fonts/src/Inter-Medium.ttf'),
+        url('../fonts/Inter-Medium.woff'),
+        url('../fonts/Inter-Medium.woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../fonts/src/Inter-Bold.ttf'),
+        url('../fonts/Inter-Bold.woff'),
+        url('../fonts/Inter-Bold.woff2');
+    font-style: normal;
+    font-weight: 700;
+}
