@@ -1,14 +1,3 @@
-//Бургер меню
-
-
-// menuBtn.addEventListener('click', function () {
-//   menu.classList.toggle('open');
-//   starting.classList.toggle('blur');
-//   education.classList.toggle('blur');
-//   logo.classList.toggle('blur');
-//   body.classList.toggle('block');
-// });
-
 // Бургер меню
 const menu = document.querySelector('.burger-menu');
 const starting = document.querySelector('.starting');
@@ -52,49 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 })
 
-// Проверка инпутов
-
-function validation() {
-  const text = document.getElementById('red_name');
-  const tel = document.getElementById('red_tel');
-  document.querySelector('.application').classList.remove('visible');
-
-  // Ошибки
-
-  const nameInput = document.getElementById('name').value;
-  if (nameInput === '') {
-    text.innerHTML = 'Поле обязетельно к заполнению';
-    document.getElementById('name').style.borderColor = '#FC0000'
-    return false;
-  }
-
-  const telInput = document.getElementById('tel').value;
-  if (telInput === '' || telInput.length < 12) {
-    tel.innerHTML = 'Поле обязетельно к заполнению';
-    document.getElementById('tel').style.borderColor = '#FC0000'
-    return false;
-  }
-
-  // Подтверждение отправки
-  if (telInput.length >= 12 && nameInput.length >= 3) {
-    document.querySelector('.application').classList.add('visible');
-
-    tel.innerHTML = '';
-    document.getElementById('tel').style.borderColor = "none";
-
-    text.innerHTML = '';
-    document.getElementById('name').style.borderColor = "none";
-
-    // Очистка формы
-    const form = document.querySelector(".form_page");
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      e.target.reset();
-    })
-  }
-}
-
 // PopUp
 const btn = document.querySelector('.start');
 const popUp = document.querySelector('.wrapper-popup');
@@ -113,5 +59,5 @@ closeBtn.addEventListener('click', function () {
   popUp.classList.remove('active');
   backgroundPopup.classList.remove('active');
   wrapper.classList.remove('blur');
-  document.getElementsByTagName("body")[0].style.overflow = 'scroll';
+  document.getElementsByTagName("body")[0].style.overflow = 'auto';
 });
