@@ -12,30 +12,6 @@ const newer = require('gulp-newer');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
-// const svgSprite = require('gulp-svg-sprite');
-const ghPages = require('gulp-gh-pages');
-
-//ghPages
-// const paths = {
-//     scripts: {
-//         src: './',
-//         dest: './dist'
-//     }
-// }
-
-// function buildHtml() {
-//     return src('app/pages/*.html')
-//         .pipe(dest(paths.scripts.dest))
-// }
-
-// exports.default = function () {
-//     buildHtml();
-// }
-
-// gulp.task('deploy', function () {
-//     return gulp.src('./dist/**/*')
-//         .pipe(ghPages());
-// })
 
 function pages() {
     return src('app/pages/*.html')
